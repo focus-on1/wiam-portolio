@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet La Table d'Anouk - Wiam Tamzirt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Dégradé de fond dynamique */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 192, 203, 0.05) 0%, rgba(255, 105, 180, 0.05) 100%);
+            animation: gradientShift 15s ease infinite;
+            background-size: 400% 400%;
+            z-index: -1;
+        }
+
+        @keyframes gradientShift {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        /* Effet de survol personnalisé */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Animation de text reveal */
+        @keyframes textReveal {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .text-reveal {
+            animation: textReveal 0.8s ease-out forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 relative overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-[#FF1493] transform transition hover:scale-105">Wiam Tamzirt</a>
+        </div>
+    </nav>
+
+    <!-- Contenu principal du projet -->
+    <div class="container mx-auto px-4 py-12 md:py-16 space-y-12">
+        <!-- En-tête du projet -->
+        <div class="text-center relative py-16 md:py-20 overflow-hidden" data-aos="fade-up">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#FF69B4]/10 to-[#FFB6C1]/10 opacity-50 -z-10"></div>
+            
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-[#FF1493] mb-6 tracking-tight relative inline-block group">
+                    <span class="relative">
+                        PROJETS 
+                        <span class="absolute -right-2 -top-2 w-3 h-3 bg-[#FF1493] rounded-full transform group-hover:scale-150 transition-transform duration-300 opacity-70"></span>
+                    </span>
+                    <span class="text-gray-800">La Table d'Anouk</span>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#FF1493] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </h1>
+                
+                <h2 class="max-w-3xl mx-auto text-xl md:text-2xl text-gray-700 leading-relaxed relative">
+                    <span class="absolute -left-4 top-0 text-[#FF1493] opacity-50 text-4xl">"</span>
+                    Un projet solidaire de communication et de collecte de fonds pour les personnes sans-abri
+                    <span class="absolute -right-4 bottom-0 text-[#FF1493] opacity-50 text-4xl">"</span>
+                </h2>
+            </div>
+
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#FF69B4]/10 rounded-full blur-2xl"></div>
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#FFB6C1]/10 rounded-full blur-2xl"></div>
+        </div>
+
+        <!-- Présentation du projet -->
+        <div class="grid md:grid-cols-2 gap-8 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-8 hover-lift" data-aos="fade-up">
+            <!-- Contexte -->
+            <div class="flex flex-col justify-center">
+                <div class="bg-white rounded-xl shadow-md p-6 border border-pink-50">
+                    <h3 class="text-xl font-semibold text-[#FF1493] mb-4">Contexte du Projet</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Ce projet tutoré a été réalisé en collaboration avec <span class="font-semibold text-[#FF1493]">La Table d'Anouk</span>, une association montpelliéraine venant en aide aux personnes sans-abri et en situation de précarité.
+                    </p>
+                    <p class="text-gray-700 mt-4 leading-relaxed">
+                        L'objectif principal était de <span class="font-semibold text-[#FF1493]">renforcer la notoriété de l'association</span> et d'organiser des événements de levée de fonds pour soutenir ses initiatives.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Problématique et objectifs -->
+            <div class="bg-white rounded-xl shadow-md p-6 border border-pink-50">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-[#FF1493] mb-4">Problématique Principale</h3>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        Comment améliorer la visibilité et la collecte de fonds pour La Table d'Anouk afin de soutenir ses actions solidaires ?
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-[#FF1493] mb-4">Objectifs</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center bg-pink-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-pink-100/50">
+                            <svg class="w-5 h-5 text-[#FF1493] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Améliorer la visibilité de l'association</span>
+                        </li>
+                        <li class="flex items-center bg-pink-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-pink-100/50">
+                            <svg class="w-5 h-5 text-[#FF1493] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Optimiser la gestion des dons</span>
+                        </li>
+                        <li class="flex items-center bg-pink-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-pink-100/50">
+                            <svg class="w-5 h-5 text-[#FF1493] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Développer les réseaux sociaux</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tâches réalisées -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-8" data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-[#FF1493] mb-6 text-center">Tâches Réalisées</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold text-[#FF1493] mb-4">Communication</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center bg-pink-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-pink-100/50">
+                            <svg class="w-5 h-5 text-[#FF1493] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Création de supports de communication</span>
+                        </li>
+                        <li class="flex items-center bg-pink-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-pink-100/50">
+                            <svg class="w-5 h-5 text-[#FF1493] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Gestion des réseaux sociaux</span>
+                        </li>
+                        <li class="flex items-center bg-pink-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-pink-100/50">
+                            <svg class="w-5 h-5 text-[#FF1493] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Stratégie digitale</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-[#FF1493] mb-4">Collecte de Fonds</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center bg-pink-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-pink-100/50">
+                            <svg class="w-5 h-5 text-[#FF1493] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Organisation d'événements</span>
+                        </li>
+                        <li class="flex items-center bg-pink-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-pink-100/50">
+                            <svg class="w-5 h-5 text-[#FF1493] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Refonte de la plateforme HelloAsso</span>
+                        </li>
+                        <li class="flex items-center bg-pink-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-pink-100/50">
+                            <svg class="w-5 h-5 text-[#FF1493] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Recherche de partenariats</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Galerie de photos -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-8" data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-[#FF1493] mb-6 text-center">Galerie</h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg bg-white h-96 md:h-[28rem] transform transition hover:scale-105 shadow-md">
+                    <img src="{{ url_for('static', filename='images/annouk/affiche_foot.png') }}" alt="Affiche football" class="w-full h-full object-contain" />
+                </div>
+                <div class="overflow-hidden rounded-lg bg-white h-96 md:h-[28rem] transform transition hover:scale-105 shadow-md">
+                    <img src="{{ url_for('static', filename='images/annouk/affiche_soire.png') }}" alt="Affiche collecte" class="w-full h-full object-contain" />
+                </div>
+                <div class="overflow-hidden rounded-lg bg-white h-96 md:h-[28rem] transform transition hover:scale-105 shadow-md">
+                    <img src="{{ url_for('static', filename='images/annouk/rose.png') }}" alt="Flyer distribution" class="w-full h-full object-contain" />
+                </div>
+                <div class="overflow-hidden rounded-lg bg-white h-96 md:h-[28rem] transform transition hover:scale-105 shadow-md">
+                    <img src="{{ url_for('static', filename='images/annouk/tarif.png') }}" alt="Affiche événement" class="w-full h-full object-contain" />
+                </div>
+            </div>
+        </div>
+        <!-- Section Sensibilisation Instagram -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-8 mt-12" data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-[#FF1493] mb-6 text-center">Sensibilisation Instagram</h3>
+            
+            <p class="text-gray-700 text-center mb-8">Exemples de posts de sensibilisation publiés sur notre compte Instagram</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="overflow-hidden rounded-lg bg-white transform transition hover:scale-105 shadow-md">
+                    <img src="{{ url_for('static', filename='images/annouk/sensibilisation.png') }}" alt="Post de sensibilisation 1" class="w-full object-contain h-auto max-h-[36rem]" />
+                    <div class="p-4 border-t border-pink-100">
+                        <h4 class="font-semibold text-[#FF1493]">Campagne de sensibilisation</h4>
+                        <p class="text-gray-600 text-sm mt-1">Publication visant à informer sur la situation des personnes sans-abri</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden rounded-lg bg-white transform transition hover:scale-105 shadow-md">
+                    <img src="{{ url_for('static', filename='images/annouk/sensibilisation2.png') }}" alt="Post de sensibilisation 2" class="w-full object-contain h-auto max-h-[36rem]" />
+                    <div class="p-4 border-t border-pink-100">
+                        <h4 class="font-semibold text-[#FF1493]">Information et engagement</h4>
+                        <p class="text-gray-600 text-sm mt-1">Contenu éducatif pour encourager le soutien à notre cause</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="https://www.instagram.com/lta.montpellier/" class="inline-flex items-center text-[#FF1493] hover:underline">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                    Voir plus sur notre Instagram
+                </a>
+            </div>
+        </div>
+        
+        <!-- Conclusion et compétences -->
+        <div class="grid md:grid-cols-2 gap-8 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-8 hover-lift" data-aos="fade-up">
+            <!-- Conclusion -->
+            <div class="bg-white rounded-xl shadow-md p-6 border border-pink-50">
+                <h3 class="text-xl font-semibold text-[#FF1493] mb-4">Conclusion</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Ce projet tutoré m'a permis de mettre en pratique mes compétences en communication tout en contribuant à une cause sociale importante. La Table d'Anouk a pu améliorer sa visibilité et augmenter ses ressources pour continuer son action auprès des personnes sans-abri.
+                </p>
+                <p class="text-gray-700 mt-4 leading-relaxed">
+                    L'expérience acquise dans la gestion de projet solidaire et la communication associative sera précieuse pour mes futurs projets professionnels.
+                </p>
+            </div>
+
+            <!-- Compétences acquises -->
+            <div class="bg-white rounded-xl shadow-md p-6 border border-pink-50">
+                <h3 class="text-xl font-semibold text-[#FF1493] mb-4">Compétences Acquises</h3>
+                <div class="space-y-3">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-pink-100 text-[#FF1493] px-3 py-1 rounded-full text-sm font-medium transform transition hover:scale-105">Gestion de projet</span>
+                        <span class="bg-pink-100 text-[#FF1493] px-3 py-1 rounded-full text-sm font-medium transform transition hover:scale-105">Communication digitale</span>
+                        <span class="bg-pink-100 text-[#FF1493] px-3 py-1 rounded-full text-sm font-medium transform transition hover:scale-105">Stratégie social media</span>
+                        <span class="bg-pink-100 text-[#FF1493] px-3 py-1 rounded-full text-sm font-medium transform transition hover:scale-105">Événementiel</span>
+                        <span class="bg-pink-100 text-[#FF1493] px-3 py-1 rounded-full text-sm font-medium transform transition hover:scale-105">Collecte de fonds</span>
+                        <span class="bg-pink-100 text-[#FF1493] px-3 py-1 rounded-full text-sm font-medium transform transition hover:scale-105">Création de contenus</span>
+                        <span class="bg-pink-100 text-[#FF1493] px-3 py-1 rounded-full text-sm font-medium transform transition hover:scale-105">Gestion de partenariats</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-[#FF1493]/5 py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 text-sm">
+                © 2025 Wiam Tamzirt - Projet tutoré La Table d'Anouk
+            </p>
+        </div>
+    </footer>
+    
+    <!-- Script AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialisation des animations AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out',
+                once: true
+            });
+            
+            // Animation pour le text reveal
+            const textElements = document.querySelectorAll('.text-reveal');
+            textElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.animationDelay = `${index * 0.2}s`;
+                    el.style.animationPlayState = 'running';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

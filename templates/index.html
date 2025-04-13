@@ -1,0 +1,1433 @@
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wiam Tamzirt | Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index/experience.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index/style.css') }}">
+</head>
+
+<body class="bg-gray-50">
+<!-- Scroll Progress Indicator -->
+<div class="scroll-indicator" id="scrollIndicator"></div>
+
+<!-- Particles Background -->
+<div id="particles-js"></div>
+
+<!-- Navigation -->
+<nav class="fixed w-full bg-white bg-opacity-80 shadow-sm z-50 backdrop-blur-sm transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold gradient-text">Wiam T.</a>
+        <div class="hidden md:flex space-x-8">
+            <a href="/" class="nav-link text-gray-700 hover:text-[#e75e45]">Accueil</a>
+            <a href="#propos" class="nav-link text-gray-700 hover:text-[#e75e45]">À propos</a>
+            <a href="#Parcours" class="nav-link text-gray-700 hover:text-[#e75e45]">Parcours</a>
+            <a href="#projets" class="nav-link text-gray-700 hover:text-[#e75e45]">Projets</a>
+            <a href="#competences" class="nav-link text-gray-700 hover:text-[#e75e45]">Compétences</a>
+            <a href="#contact" class="nav-link text-gray-700 hover:text-[#e75e45]">Contact</a>
+        </div>
+        <button class="md:hidden focus:outline-none" id="menu-toggle">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden bg-white shadow-md rounded-b-lg transition-all duration-300 ease-in-out" id="mobile-menu">
+        <div class="flex flex-col space-y-4 px-6 py-4">
+            <a href="/" class="text-gray-700 hover:text-[#e75e45] py-2 border-b border-gray-100">Accueil</a>
+            <a href="#propos" class="text-gray-700 hover:text-[#e75e45] py-2 border-b border-gray-100">À propos</a>
+            <a href="#Parcours" class="text-gray-700 hover:text-[#e75e45] py-2 border-b border-gray-100">Parcours</a>
+            <a href="#projets" class="text-gray-700 hover:text-[#e75e45] py-2 border-b border-gray-100">Projets</a>
+            <a href="#competences" class="text-gray-700 hover:text-[#e75e45] py-2 border-b border-gray-100">Compétences</a>
+            <a href="#contact" class="text-gray-700 hover:text-[#e75e45] py-2">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center pt-20 pb-32 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <!-- Effet de glassmorphisme et vagues animées -->
+    <div class="absolute inset-0 overflow-hidden">
+        <!-- Vagues animées en arrière-plan -->
+        <div class="absolute inset-0 z-0">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(231, 94, 69, 0.1)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(231, 94, 69, 0.15)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(231, 94, 69, 0.2)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(231, 94, 69, 0.05)" />
+                </g>
+            </svg>
+        </div>
+        
+        <!-- Cercles décoratifs animés -->
+        <div class="absolute top-20 left-20 w-64 h-64 bg-[#e75e45] opacity-10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-[#4f93ce] opacity-10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/3 right-1/4 w-40 h-40 bg-[#e75e45] opacity-10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+        
+        <!-- Particules flottantes -->
+        <div id="particles-js" class="absolute inset-0 z-0"></div>
+    </div>
+    
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2 text-center lg:text-left" data-scroll-reveal="enter left move 30px over 0.6s after 0.2s">
+                <!-- Badge stylisé -->
+                <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md rounded-full mb-6 text-white/90 border border-white/20">
+                    <span class="flex h-3 w-3 relative mr-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#e75e45] opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-[#e75e45]"></span>
+                    </span>
+                    <p class="font-medium tracking-wider uppercase text-sm">Portfolio Professionnel</p>
+                </div>
+                
+                <!-- Titre principal avec effet -->
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
+                    <span class="gradient-text relative inline-block">
+                        WIAM
+                        <div class="absolute -bottom-1 left-0 w-full h-1 bg-[#e75e45]/40 rounded-full transform origin-left animate-pulse"></div>
+                    </span>
+                    <br /> 
+                    <span class="gradient-text ml-8 md:ml-12 relative inline-block">
+                        TAMZIRT
+                        <div class="absolute -bottom-1 left-0 w-full h-1 bg-[#e75e45]/40 rounded-full transform origin-left animate-pulse"></div>
+                    </span>
+                </h1>
+                
+                <!-- Texte dynamique -->
+                <div class="text-xl text-gray-300 mb-8 h-16 backdrop-blur-sm bg-white/5 px-4 py-2 rounded-lg inline-block">
+                    <span id="typed-output"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                
+                <!-- Boutons d'action -->
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <a href="#propos" class="px-8 py-3 rounded-full shadow-lg bg-gradient-to-r from-[#e75e45] to-[#e78045] text-white font-medium hover:shadow-[#e75e45]/30 hover:shadow-xl transform transition duration-300 hover:-translate-y-1 inline-block">
+                        En savoir plus
+                    </a>
+                    <a href="/contact" class="px-8 py-3 rounded-full shadow-lg bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transform transition duration-300 hover:-translate-y-1 inline-block">
+                        Me contacter
+                    </a>
+                </div>
+                
+                <!-- Social links -->
+                <div class="mt-10 flex justify-center lg:justify-start space-x-4">
+                    <a href="https://www.linkedin.com/in/wiam-tamzirt" class="group w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#e75e45] hover:border-[#e75e45] hover:text-white flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                        <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs text-white -bottom-6">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 flex justify-center" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                <div class="relative">
+                    <div class="profile-card relative">
+                        <!-- Decorative background shapes avec animation avancée -->
+                        <div class="absolute -left-10 -top-10 w-64 h-64 bg-[#e75e45] opacity-10 rounded-full blur-3xl animate-float"></div>
+                        <div class="absolute -right-5 bottom-10 w-40 h-40 bg-[#4f93ce] opacity-10 rounded-full blur-3xl animate-float-delay"></div>
+                        
+                        <!-- Effet de glassmorphisme autour de l'image -->
+                        <div class="absolute -inset-4 rounded-2xl bg-gradient-to-r from-[#e75e45]/20 to-[#4f93ce]/20 backdrop-blur-xl opacity-70 transform -rotate-6"></div>
+                        
+                        <!-- Main image container with animation -->
+                        <div class="relative z-10 rounded-xl overflow-hidden border-4 border-white/20 shadow-2xl animated-border bg-gradient-to-br from-gray-900/70 to-gray-800/70 backdrop-blur-md">
+                            <img src="{{ url_for('static', filename='images/wiam.png') }}" alt="Wiam Tamzirt" class="w-80 h-96 object-cover">
+                            
+                            <!-- Overlay with additional info -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end transform translate-y-full hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-white text-lg font-bold">Wiam Tamzirt</h3>
+                                <p class="text-white/90 text-sm">Marketing Digital & Développement Web</p>
+                                <div class="mt-4 flex space-x-2">
+                                    <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs rounded-full border border-white/10">Étudiante</span>
+                                    <span class="px-3 py-1 bg-[#e75e45]/30 backdrop-blur-sm text-white text-xs rounded-full border border-[#e75e45]/20">Créative</span>
+                                    <span class="px-3 py-1 bg-[#4f93ce]/30 backdrop-blur-sm text-white text-xs rounded-full border border-[#4f93ce]/20">Passionnée</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Decorative floating badges -->
+                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-full shadow-lg z-20 pulse">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        
+                        <!-- Bulles flottantes autour de l'image -->
+                        <div class="absolute top-0 -left-6 w-8 h-8 bg-[#e75e45]/20 rounded-full backdrop-blur-md animate-float-slow border border-[#e75e45]/30"></div>
+                        <div class="absolute bottom-10 -right-8 w-12 h-12 bg-[#4f93ce]/20 rounded-full backdrop-blur-md animate-float-slower border border-[#4f93ce]/30"></div>
+                        <div class="absolute top-1/3 -right-4 w-6 h-6 bg-white/10 rounded-full backdrop-blur-md animate-ping"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll down indicator -->
+    <a href="#propos" class="scroll-down text-white/80 hover:text-white transition-colors group">
+        <span class="group-hover:text-[#e75e45] transition-colors">Découvrir</span>
+        <div class="mouse border-white/40 group-hover:border-[#e75e45]">
+            <div class="wheel bg-white/80 group-hover:bg-[#e75e45]"></div>
+        </div>
+    </a>
+    
+    <!-- Wave separator -->
+    <div class="hero-shape">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+</section>
+
+<style>
+    /* Animation des vagues */
+    .waves {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+    
+    .parallax > use {
+        animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    }
+    
+    .parallax > use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 7s;
+    }
+    
+    .parallax > use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 10s;
+    }
+    
+    .parallax > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 13s;
+    }
+    
+    .parallax > use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 20s;
+    }
+    
+    @keyframes move-forever {
+        0% {
+            transform: translate3d(-90px,0,0);
+        }
+        100% { 
+            transform: translate3d(85px,0,0);
+        }
+    }
+    
+    /* Animations flottantes */
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-float-delay {
+        animation: float 7s ease-in-out 2s infinite;
+    }
+    
+    .animate-float-slow {
+        animation: float 10s ease-in-out infinite;
+    }
+    
+    .animate-float-slower {
+        animation: float 12s ease-in-out 1s infinite;
+    }
+    
+    /* Curseur d'écriture */
+    .typing-cursor {
+        display: inline-block;
+        width: 3px;
+        background-color: currentColor;
+        animation: typing-cursor 0.7s infinite;
+    }
+    
+    @keyframes typing-cursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+    
+    /* Style du gradient-text */
+    .gradient-text {
+        background: linear-gradient(45deg, #e75e45, #ff9d7a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+        position: relative;
+        text-shadow: 0 10px 20px rgba(231, 94, 69, 0.2);
+    }
+    
+    /* Bordure animée */
+    .animated-border::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 10px;
+        padding: 3px;
+        background: linear-gradient(45deg, #e75e45, #4f93ce, #e75e45);
+        background-size: 200% 200%;
+        animation: rotate-gradient 4s linear infinite;
+        -webkit-mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+    
+    @keyframes rotate-gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Configuration des particules
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 30, density: { enable: true, value_area: 800 } },
+                color: { value: ["#e75e45", "#4f93ce", "#ffffff"] },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true, anim: { enable: true, speed: 0.5, opacity_min: 0.1, sync: false } },
+                size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.1, sync: false } },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.1, width: 1 },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 0.3 } },
+                    push: { particles_nb: 3 }
+                }
+            },
+            retina_detect: true
+        });
+    }
+    
+    // Configuration de l'animation de texte
+    if (typeof Typed !== 'undefined') {
+        var typed = new Typed('#typed-output', {
+            strings: [
+                "Marketing Digital",
+                "Développement Web",
+                "Communication",
+                "Créativité & Innovation"
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 1500,
+            startDelay: 500,
+            loop: true,
+            showCursor: false
+        });
+    }
+});
+</script>
+
+<!-- About Me Preview Section -->
+<section id="propos" class="py-12 md:py-24 bg-gray-50 relative overflow-hidden">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
+            <!-- Texte principal -->
+            <div class="lg:w-1/2 w-full" data-scroll-reveal="enter left move 30px over 0.6s after 0.2s">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6">Qui suis-je?</h2>
+                <p class="text-gray-600 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
+                    Passionnée par le <span class="text-[#e75e45] font-semibold">marketing digital</span>, je suis actuellement étudiante en <span class="text-[#e75e45] font-semibold">2ᵉ année de BUT Techniques de Commercialisation</span>, spécialisée dans l'option <span class="text-[#e75e45] font-semibold">Marketing Digital, E-business et Entrepreneuriat</span>. Ma créativité et ma rigueur me permettent d'apporter une approche innovante et méthodique à chaque projet.
+                </p>
+                <p class="text-gray-600 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
+                    Animée par la <span class="text-[#e75e45] font-semibold">curiosité</span> et le goût du <span class="text-[#e75e45] font-semibold">challenge</span>, je suis à la recherche d'une <span class="text-[#e75e45] font-semibold">alternance dès 2025</span>. Disponible en <span class="text-[#e75e45] font-semibold">rythme alterné (1 semaine/1 semaine)</span> et à temps plein à partir de <span class="text-[#e75e45] font-semibold">mi-mars 2026</span>, je suis déterminée à m'investir dans des environnements dynamiques qui favorisent la croissance et le partage.
+                </p>
+                <div class="flex flex-wrap gap-3 md:gap-4 mb-6 md:mb-8">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#e75e45]/10 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm md:text-base text-gray-700">Créative & <span class="text-[#e75e45]">Innovante</span></span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#e75e45]/10 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm md:text-base text-gray-700">Rigoureuse & <span class="text-[#e75e45]">Méthodique</span></span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#e75e45]/10 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm md:text-base text-gray-700">Dynamique & <span class="text-[#e75e45]">Relationnelle</span></span>
+                    </div>
+                </div>
+                <a href="/contact" class="px-6 py-2 md:px-8 md:py-3 rounded-full shadow-lg btn-primary inline-block text-sm md:text-base">
+                    Contactez-moi
+                </a>
+            </div>
+            
+            <!-- Section statistiques -->
+            <div class="lg:w-1/2 w-full mt-8 lg:mt-0" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                <div class="grid grid-cols-2 gap-4 md:gap-6">
+                    <div class="bg-white p-4 md:p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center space-x-2 md:space-x-4">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#e75e45]/10 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xs md:text-sm text-gray-500">Formation</h4>
+                                <p class="text-xl md:text-2xl font-bold text-[#e75e45]">BUT TC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center space-x-2 md:space-x-4">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#4f93ce]/10 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-[#4f93ce]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xs md:text-sm text-gray-500">Option</h4>
+                                <p class="text-xl md:text-2xl font-bold text-[#e75e45]">Marketing Digital</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center space-x-2 md:space-x-4">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xs md:text-sm text-gray-500">Disponibilité</h4>
+                                <p class="text-xl md:text-2xl font-bold text-[#e75e45]">Mars 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center space-x-2 md:space-x-4">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-100 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xs md:text-sm text-gray-500">Rythme</h4>
+                                <p class="text-xl md:text-2xl font-bold text-[#e75e45]">1 sem/1 sem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Éléments décoratifs de fond -->
+    <div class="absolute -right-20 md:-right-40 -bottom-20 md:-bottom-40 w-40 h-40 md:w-80 md:h-80 bg-[#e75e45] opacity-5 rounded-full"></div>
+    <div class="absolute -left-10 md:-left-20 top-10 md:top-20 w-30 h-30 md:w-60 md:h-60 bg-[#4f93ce] opacity-5 rounded-full"></div>
+</section>
+
+<!-- Section Expérience & Formation version optimisée avec personnage -->
+<section id="Parcours" class="experience-section py-12 relative overflow-hidden">
+    <!-- Fond avec effet de parallaxe -->
+    <div class="parallax-bg"></div>
+    
+    <!-- Particules animées -->
+
+    
+    <!-- Contenu principal -->
+    <div class="container mx-auto px-6 relative z-10">
+        <!-- Titre principal avec effet 3D -->
+        <div class="title-3d-container mb-10">
+            <h2 class="title-3d">EXPÉRIENCE & FORMATION</h2>
+            <div class="title-shadow"></div>
+        </div>
+        
+        <!-- Interface d'exploration interactive -->
+        <div class="journey-explorer">
+            <!-- Contrôles de navigation -->
+            <div class="explorer-controls">
+                <button id="prev-station" class="ctrl-btn left-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z" fill="currentColor"/></svg>
+                </button>
+                <div class="explorer-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div class="station-indicators"></div>
+                </div>
+                <button id="next-station" class="ctrl-btn right-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"/></svg>
+                </button>
+            </div>
+            
+            <!-- Zone principale d'affichage -->
+            <div class="journey-viewer">
+                <!-- Personnage/Avatar -->
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <img src="{{ url_for('static', filename='images/avatar.png') }}" alt="Wiam Tamzirt" class="avatar-img">
+                        <div class="avatar-xp-bar">
+                            <div class="avatar-xp-fill"></div>
+                        </div>
+                        <div class="avatar-level">Niveau <span id="avatar-level-num">1</span></div>
+                    </div>
+                </div>
+                
+                <!-- Parcours sous forme de métro/circuit -->
+                <div class="metro-map">
+                    <!-- Stations / Expériences (conteneur carousel) -->
+                    <div class="stations-carousel">
+                        <!-- Station 1 -->
+                        <div class="metro-station station-formation" data-year="2023" data-xp="15">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2023</div>
+                                <h3>BACCALAURÉAT GÉNÉRAL</h3>
+                                <p>Lycée Jean-François Champollion, France</p>
+                                <p class="station-details">Mention bien</p>
+                                <span class="station-tag">Spécialités SES & HGGSP</span>
+                                <div class="xp-gain">+15 XP</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Station 2 -->
+                        <div class="metro-station station-experience" data-year="2021" data-xp="10">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2021</div>
+                                <h3>VENDEUSE EN ALIMENTATION</h3>
+                                <p>La Maison du Sandwich | Port Camargue</p>
+                                <p class="station-details">2 mois</p>
+                                <span class="station-tag">Préparation et encaissement de commandes</span>
+                                <span class="station-tag">Suivi d'état des stocks</span>
+                                <div class="xp-gain">+10 XP</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Station 3 -->
+                        <div class="metro-station station-experience" data-year="2022" data-xp="12">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2022</div>
+                                <h3>SERVEUSE</h3>
+                                <p>Crêperie la Placette | Port Camargue</p>
+                                <p class="station-details">3 mois</p>
+                                <span class="station-tag">Résistance physique</span>
+                                <span class="station-tag">Organisation, rapidité et efficacité</span>
+                                <div class="xp-gain">+12 XP</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Station 4 -->
+                        <div class="metro-station station-experience" data-year="2023" data-xp="15">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2023</div>
+                                <h3>CHEFFE DE RANG</h3>
+                                <p>Crêperie la Placette | Port Camargue</p>
+                                <p class="station-details">3 mois</p>
+                                <span class="station-tag">Gestion d'un espace de clientèle</span>
+                                <span class="station-tag">Supervision du service</span>
+                                <div class="xp-gain">+15 XP</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Station 5 -->
+                        <div class="metro-station station-formation" data-year="2023" data-xp="20">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2023 - en cours</div>
+                                <h3>BUT TECHNIQUES DE COMMERCIALISATION</h3>
+                                <p>IUT de Montpellier, France</p>
+                                <p class="station-details">2ème année en cours</p>
+                                <span class="station-tag">Option Marketing Digital, E-business et Entrepreneuriat</span>
+                                <div class="xp-gain">+20 XP</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Station 6 -->
+                        <div class="metro-station station-experience" data-year="2023" data-xp="18">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2023</div>
+                                <h3>STAGE - MANDATAIRE EN ASSURANCE</h3>
+                                <p>IAG Santé | Castelnau-le-Lez</p>
+                                <p class="station-details">2 semaines</p>
+                                <span class="station-tag">Prospection et télémarketing</span>
+                                <span class="station-tag">Négociation et relation client</span>
+                                <div class="xp-gain">+18 XP</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Station 7 -->
+                        <div class="metro-station station-experience" data-year="2023" data-xp="12">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2023</div>
+                                <h3>ENQUÊTRICE TÉLÉPHONIQUE</h3>
+                                <p>Université de Montpellier | Télétravail</p>
+                                <p class="station-details">15 heures</p>
+                                <span class="station-tag">Campagne d'appels téléphoniques</span>
+                                <span class="station-tag">Rédaction et saisie de données</span>
+                                <div class="xp-gain">+12 XP</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Station 8 -->
+                        <div class="metro-station station-experience" data-year="2024" data-xp="14">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2024</div>
+                                <h3>EMPLOYÉE POLYVALENTE</h3>
+                                <p>Lidl | Le Grau du Roi</p>
+                                <p class="station-details">CDD | 2 mois</p>
+                                <span class="station-tag">Encaissement</span>
+                                <span class="station-tag">Mise en rayon et facing</span>
+                                <div class="xp-gain">+14 XP</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Station 9 -->
+                        <div class="metro-station station-experience" data-year="2024" data-xp="16">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2024</div>
+                                <h3>CONSEILLÈRE DE VENTES</h3>
+                                <p>Éco Beauté | Le Grau du Roi</p>
+                                <p class="station-details">3 mois</p>
+                                <span class="station-tag">Conseil et vente de produits</span>
+                                <span class="station-tag">Merchandising et mise en rayon</span>
+                                <div class="xp-gain">+16 XP</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Station 10 -->
+                        <div class="metro-station station-experience" data-year="2024" data-xp="13">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2024</div>
+                                <h3>VEILLEUSE TÉLÉPHONIQUE</h3>
+                                <p>Université de Montpellier | Télétravail</p>
+                                <p class="station-details">3 mois</p>
+                                <span class="station-tag">Appels aux étudiants en première année</span>
+                                <span class="station-tag">Écouter, échanger, renseigner</span>
+                                <div class="xp-gain">+13 XP</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Station 11 -->
+                        <div class="metro-station station-experience" data-year="2024" data-xp="10">
+                            <div class="station-marker">
+                                <div class="pulse-animation"></div>
+                            </div>
+                            <div class="station-card">
+                                <div class="station-year">2024 - présent</div>
+                                <h3>BÉNÉVOLE</h3>
+                                <p>La Table d'Anouk | Montpellier</p>
+                                <p class="station-details">En cours</p>
+                                <span class="station-tag">Préparation de repas</span>
+                                <span class="station-tag">Création de contenu Instagram</span>
+                                <div class="xp-gain">+10 XP</div>
+                            </div>
+                        </div>
+                        
+                        <div class="metro-station station-future" data-year="2025" data-xp="9999">
+                            <div class="station-marker future-marker">
+                                <div class="pulse-animation future-pulse"></div>
+                            </div>
+                            <div class="station-card future-card">
+                                <div class="station-year future-year" style="top: 10px;">2025-2026</div>
+                                <div class="question-mark">?</div>
+                                <h3>POURQUOI PAS VOUS ?</h3>
+                                <p>La prochaine étape de mon parcours pourrait être à vos côtés</p>
+                                <p class="station-details">Disponible en alternance (1 sem./1 sem.) et à temps plein dès mi-mars 2026</p>
+                                <span class="station-tag future-tag">Développement commercial</span>
+                                <span class="station-tag future-tag">Marketing digital</span>
+                                <span class="station-tag future-tag">Créativité & innovation</span>
+                                <div href="#contact" class="join-btn">REJOINDRE L'AVENTURE</div>
+                                <div class="xp-gain future-xp">+∞ XP</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="usage-hint">
+                <p>"on ne juge pas un livre a ca couverture "</p>
+                <p>Utilisez les flèches <span class="key">←</span> <span class="key">→</span> pour naviguer</p>
+            </div>
+        </div>
+
+        
+        <!-- QR Code avec hover effet 3D -->
+        <div class="qr-container">
+            <div class="qr-3d-card" onclick="openPDF()">
+                <div class="qr-front">
+                    <h3 class="qr-title">SCAN ME !</h3>
+                    <img src="{{ url_for('static', filename='images/qr_code.png') }}" alt="QR Code" class="qr-image">
+                </div>
+                <div class="qr-back">
+                    <h3>MON CV COMPLET</h3>
+                    <p>Vous ne pouvez pas scanner ? 
+                        <span onclick="openPDF()" class="inline-block mt-2 px-3 py-1 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 cursor-pointer transition">
+                            Cliquez ici
+                        </span>
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+       
+
+    </div>
+</section>
+<script>
+    function openPDF() {
+        window.open("{{ url_for('static', filename='pdf/_Wiam_Tamzirt_CV_Alternance.pdf') }}", "_blank");
+    }
+</script>
+
+
+    <style>
+    .qr-3d-card {
+        cursor: pointer;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    
+    .qr-3d-card:hover {
+        transform: rotateY(180deg);
+    }
+    
+    .qr-front, .qr-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    
+    .qr-back {
+        transform: rotateY(180deg);
+    }
+    
+    #pdf-modal {
+        transition: all 0.3s ease;
+    }
+    
+    #pdf-iframe {
+        border: none;
+    }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Éléments DOM
+    const stations = document.querySelectorAll('.metro-station');
+    const carousel = document.querySelector('.stations-carousel');
+    const prevBtn = document.getElementById('prev-station');
+    const nextBtn = document.getElementById('next-station');
+    const progressFill = document.querySelector('.progress-fill');
+    const avatarImg = document.querySelector('.avatar-img');
+    const avatarXpFill = document.querySelector('.avatar-xp-fill');
+    const avatarLevelNum = document.getElementById('avatar-level-num');
+    const indicatorsContainer = document.querySelector('.station-indicators');
+    
+    // Variables d'état
+    let currentIndex = 0;
+    let currentXp = 0;
+    let maxXp = 100;
+    let currentLevel = 1;
+    let totalStations = stations.length;
+    let stationsVisited = new Array(totalStations).fill(false);
+    
+    // Initialisation
+    function init() {
+        // Créer les indicateurs de stations
+        for (let i = 0; i < totalStations; i++) {
+            const indicator = document.createElement('div');
+            indicator.className = 'station-indicator';
+            indicator.dataset.index = i;
+            indicatorsContainer.appendChild(indicator);
+            
+            // Ajouter l'événement de clic
+            indicator.addEventListener('click', () => {
+                goToStation(i);
+            });
+        }
+        
+        // Configurer les boutons
+        updateNavigationButtons();
+        prevBtn.addEventListener('click', goToPrevStation);
+        nextBtn.addEventListener('click', goToNextStation);
+        
+        // Activer la première station
+        activateStation(0);
+        
+        // Écouter les événements clavier
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                goToPrevStation();
+            } else if (e.key === 'ArrowRight') {
+                goToNextStation();
+            }
+        });
+        
+        // Configurer les particules en arrière-plan
+        if (typeof particlesJS !== 'undefined') {
+            particlesJS('particles-experience', {
+                particles: {
+                    number: { value: 50, density: { enable: true, value_area: 800 } },
+                    color: { value: ["#ff7b00", "#e75e45", "#00b3ff"] },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.3, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 150, color: "#ff7b00", opacity: 0.2, width: 1 },
+                    move: { enable: true, speed: 1, direction: "none", random: true, out_mode: "out", bounce: false }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "bubble" },
+                        onclick: { enable: true, mode: "push" },
+                        resize: true
+                    },
+                    modes: {
+                        bubble: { distance: 200, size: 5, duration: 0.4 },
+                        push: { particles_nb: 3 }
+                    }
+                },
+                retina_detect: true
+            });
+        }
+        
+        // Effet parallaxe au défilement
+        window.addEventListener('scroll', function() {
+            const scrolled = window.scrollY;
+            document.querySelector('.parallax-bg').style.transform = `translateY(${scrolled * 0.3}px)`;
+            document.querySelector('.title-3d').style.transform = `rotateX(10deg) translateY(${scrolled * 0.05}px)`;
+        });
+    }
+    
+    // Navigation des stations
+    function goToStation(index) {
+        if (index < 0 || index >= totalStations) return;
+        
+        // Désactiver la station actuelle
+        stations[currentIndex].classList.remove('active');
+        
+        // Activer la nouvelle station
+        currentIndex = index;
+        activateStation(currentIndex);
+        updateNavigationButtons();
+    }
+    
+    function goToNextStation() {
+        if (currentIndex < totalStations - 1) {
+            goToStation(currentIndex + 1);
+        }
+    }
+    
+    function goToPrevStation() {
+        if (currentIndex > 0) {
+            goToStation(currentIndex - 1);
+        }
+    }
+    
+    function activateStation(index) {
+        // Marquer comme active
+        stations[index].classList.add('active');
+        
+        // Déplacer le carousel
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+        
+        // Mettre à jour la progression
+        updateProgress(index);
+        
+        // Marquer la station comme visitée si première visite
+        if (!stationsVisited[index]) {
+            stationsVisited[index] = true;
+            
+            // Ajouter de l'XP pour cette station
+            const xpGain = parseInt(stations[index].dataset.xp || 10);
+            addXp(xpGain);
+            
+            // Afficher le gain d'XP
+            const xpGainElement = stations[index].querySelector('.xp-gain');
+            if (xpGainElement) {
+                xpGainElement.classList.add('show');
+                setTimeout(() => {
+                    xpGainElement.classList.remove('show');
+                }, 3000);
+            }
+        }
+        
+        // Mettre à jour les indicateurs
+        updateIndicators();
+    }
+    
+    function updateProgress(index) {
+        const progressPercentage = (index / (totalStations - 1)) * 100;
+        progressFill.style.width = `${progressPercentage}%`;
+    }
+    
+    function updateNavigationButtons() {
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === totalStations - 1;
+        
+        prevBtn.style.opacity = prevBtn.disabled ? '0.5' : '1';
+        nextBtn.style.opacity = nextBtn.disabled ? '0.5' : '1';
+    }
+    
+    function updateIndicators() {
+        const indicators = document.querySelectorAll('.station-indicator');
+        
+        indicators.forEach((indicator, index) => {
+            indicator.classList.remove('active');
+            
+            if (stationsVisited[index]) {
+                indicator.classList.add('visited');
+            }
+            
+            if (index === currentIndex) {
+                indicator.classList.add('active');
+            }
+        });
+    }
+    
+    // Système d'XP et de niveau
+    function addXp(amount) {
+        currentXp += amount;
+        
+        // Vérifier si passage de niveau
+        while (currentXp >= maxXp) {
+            currentXp -= maxXp;
+            levelUp();
+        }
+        
+        // Mettre à jour la barre d'XP
+        const xpPercentage = (currentXp / maxXp) * 100;
+        avatarXpFill.style.width = `${xpPercentage}%`;
+    }
+    
+    function levelUp() {
+        currentLevel++;
+        maxXp = Math.floor(maxXp * 1.5); // Augmentation du seuil d'XP pour le niveau suivant
+        
+        // Mettre à jour l'affichage du niveau
+        avatarLevelNum.textContent = currentLevel;
+        
+        // Animation de montée de niveau
+        avatarImg.classList.add('avatar-level-up');
+        setTimeout(() => {
+            avatarImg.classList.remove('avatar-level-up');
+        }, 800);
+    }
+    
+    // Initialiser l'expérience
+    init();
+});
+</script>
+
+<!-- Projects Preview Section -->
+<section  id="projets" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="mb-16 text-center" data-scroll-reveal="enter top move 30px over 0.6s after 0.2s">
+            <h2 class="text-4xl font-bold mb-4">Projets Récents</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Un aperçu de mes réalisations récentes qui illustrent mes compétences et mon approche.</p>
+        </div>
+        
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+            <!-- Project 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="h-48 bg-gradient-to-r from-purple-400 to-purple-600 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center text-white">
+                        <img src="/static/images/flowry/boutteil.png" alt="Flowry Logo" class="h-45 w-44 object-contain opacity-80">
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-[#e75e45]">Projet Flowry</h3>
+                    <p class="text-gray-600 mb-4">
+                        Conception d'une stratégie marketing pour une bière artisanale florale, développée en collaboration avec des étudiants en génie biologique lors d'un projet universitaire.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Marketing</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Branding</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Stratégie</span>
+                    </div>
+                    <a href="/projets/flowry" class="text-[#e75e45] font-medium hover:underline inline-flex items-center">
+                        Voir le projet
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="h-48 bg-gradient-to-r from-[#8B0000] to-[#B22222] relative overflow-hidden">
+                    <div class="h-48 bg-white relative overflow-hidden flex items-center justify-center">
+                        <img src="/static/images/delice_libane/logo.png" alt="Les Délices du Liban Logo" class="h-60 w-60 object-contain">
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-[#8B0000]">Les Délices du Liban</h3>
+                    <p class="text-gray-600 mb-4">
+                        Projet de stratégie de communication commerciale pour un restaurant de cuisine libanaise à Montpellier, visant à renforcer sa visibilité et sa notoriété.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Communication</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Restauration</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Marketing</span>
+                    </div>
+                    <a href="/projets/delices-du-liban" class="text-[#8B0000] font-medium hover:underline inline-flex items-center">
+                        Voir le projet
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                <div class="h-48 bg-gradient-to-r from-gray-100 to-gray-200 relative overflow-hidden flex items-center justify-center">
+                    <img src="/static/images/eco_beauty/logo.png" alt="Eco-Beauty Logo" class="h-100 w-100 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 tracking-tight">Eco-Beauty</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Création d'une marque de cosmétiques éco-responsables, développant une stratégie digitale innovante pour une présence en ligne percutante.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs bg-gray-200 text-gray-800 rounded-full">E-commerce</span>
+                        <span class="px-2 py-1 text-xs bg-gray-200 text-gray-800 rounded-full">Marketing Digital</span>
+                        <span class="px-2 py-1 text-xs bg-gray-200 text-gray-800 rounded-full">Beauté</span>
+                    </div>
+                    <a href="/projets/eco-beauty" class="text-gray-900 font-semibold hover:text-gray-700 inline-flex items-center group">
+                        Voir le projet
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Project 4 - La Table d'Anouk -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 relative overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 relative overflow-hidden flex items-center justify-center">
+                        <img src="/static/images/annouk/logo.png" alt="La Table d'Anouk" class="h-full w-full object-cover transition-all duration-300">
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">La Table d'Anouk</h3>
+                    <p class="text-gray-600 mb-4">
+                        Stratégie de communication et organisation d'événements pour une association montpelliéraine venant en aide aux personnes sans-abri, avec pour objectif principal de renforcer sa notoriété et collecter des fonds.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Communication</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Solidarité</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Événementiel</span>
+                    </div>
+                    <a href="/projets/table-anouk" class="text-blue-700 font-medium hover:underline inline-flex items-center">
+                        Voir le projet
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+
+                
+            </div>
+            <!-- Project 4 - TC FRANCE -->        
+            
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 relative overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-gray-100 to-gray-200 relative overflow-hidden flex items-center justify-center">
+                        <img src="/static/images/TC/logo.png" alt="TC FRANCE" class="h-100 w-100 object-contain  hover:grayscale-0 transition-all duration-300">
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">TC FRANCE</h3>
+                    <p class="text-gray-600 mb-4">
+                        Refonte complète du site web de TC France, réseau national des BUT Techniques de Commercialisation, pour améliorer l'expérience utilisateur, l'accessibilité et la visibilité en ligne auprès des étudiants, parents, recruteurs et enseignants.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">UX Design</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Développement Web</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Accessibilité</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Marketing Digital</span>
+                    </div>
+                    <a href="/projets/tc-france" class="text-blue-700 font-medium hover:underline inline-flex items-center">
+                        Voir le projet
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group cursor-pointer relative">
+                <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-800 relative overflow-hidden flex items-center justify-center">
+                    <div class="absolute inset-0 bg-purple-600 opacity-30 group-hover:opacity-10 transition-opacity duration-500"></div>
+                    
+                    <!-- Effet de particules mystérieuses -->
+                    <div class="absolute inset-0 overflow-hidden opacity-20 group-hover:opacity-40 transition-opacity duration-500">
+                        <div class="absolute h-2 w-2 bg-white rounded-full top-1/4 left-1/4 animate-pulse"></div>
+                        <div class="absolute h-1 w-1 bg-white rounded-full top-1/3 left-2/3 animate-ping"></div>
+                        <div class="absolute h-3 w-3 bg-white rounded-full top-2/3 left-1/3 animate-pulse"></div>
+                        <div class="absolute h-2 w-2 bg-white rounded-full top-1/2 left-3/4 animate-ping"></div>
+                        <div class="absolute h-1 w-1 bg-white rounded-full top-3/4 left-1/5 animate-pulse"></div>
+                    </div>
+                    
+                    <!-- Point d'interrogation animé -->
+                    <div class="text-8xl font-bold text-white animate-bounce group-hover:animate-pulse transition-all duration-500 transform group-hover:scale-125 rotate-3">
+                        ?
+                    </div>
+                    <div class="absolute -bottom-2 left-1/4 text-7xl font-bold text-white/10 animate-pulse transform rotate-12">?</div>
+                    <div class="absolute top-1/4 -right-2 text-6xl font-bold text-white/10 animate-ping transform -rotate-12">?</div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2 text-purple-700 tracking-wider">Projet Secret</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Que se cache-t-il derrière ce mystère ? Un projet unique qui pourrait vous surprendre...
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs bg-purple-100 text-purple-800 rounded-full">???</span>
+                        <span class="px-2 py-1 text-xs bg-purple-100 text-purple-800 rounded-full">???</span>
+                        <span class="px-2 py-1 text-xs bg-purple-100 text-purple-800 rounded-full">???</span>
+                    </div>
+                    <a href="/projets/secret" class="text-purple-700 font-medium hover:text-purple-900 inline-flex items-center justify-center group relative w-full">
+                        <span class="group-hover:mr-4 transition-all duration-300">Découvrir</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-0 w-0 group-hover:h-4 group-hover:w-4 transition-all duration-500 absolute opacity-0 group-hover:opacity-100 group-hover:relative" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- <div class="text-center mt-12">
+            <a href="/projets" class="px-8 py-3 rounded-full shadow-lg btn-primary inline-block">
+                Tous les projets
+            </a>
+        </div>-->
+    </div>
+</section>
+
+<!-- Call to Action -->
+
+<!-- Skills Showcase Section -->
+<section id="competences" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="mb-16 text-center" data-scroll-reveal="enter top move 30px over 0.6s after 0.2s">
+            <h2 class="text-4xl font-bold mb-4">Mes Domaines d'Expertise</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Découvrez mes compétences en marketing digital, commerce, informatique et langues. Un profil polyvalent pour répondre à vos besoins.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+            <!-- Marketing Digital -->
+            <div class="skill-card rounded-xl p-6 text-center relative overflow-hidden bg-white">
+                <div class="skill-icon w-20 h-20 mx-auto mb-4 p-4 rounded-full bg-pink-50 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Marketing Digital</h3>
+                <p class="text-gray-600 mb-4">Gestion de réseaux sociaux, analyse et création de site web</p>
+                <div class="flex flex-wrap justify-center gap-2 mt-4">
+                    <span class="px-3 py-1 text-xs bg-pink-100 text-pink-800 rounded-full">Réseaux sociaux</span>
+                    <span class="px-3 py-1 text-xs bg-pink-100 text-pink-800 rounded-full">SEO</span>
+                    <span class="px-3 py-1 text-xs bg-pink-100 text-pink-800 rounded-full">Web Analytics</span>
+                </div>
+            </div>
+            
+            <!-- Commerciales -->
+            <div class="skill-card rounded-xl p-6 text-center relative overflow-hidden bg-white">
+                <div class="skill-icon w-20 h-20 mx-auto mb-4 p-4 rounded-full bg-blue-50 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#4f93ce]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Commerciales</h3>
+                <p class="text-gray-600 mb-4">Négociation, relation client, prospection, télémarketing</p>
+                <div class="flex flex-wrap justify-center gap-2 mt-4">
+                    <span class="px-3 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">Négociation</span>
+                    <span class="px-3 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">Prospection</span>
+                    <span class="px-3 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">Fidélisation</span>
+                </div>
+            </div>
+            
+            <!-- Informatique -->
+            <div class="skill-card rounded-xl p-6 text-center relative overflow-hidden bg-white">
+                <div class="skill-icon w-20 h-20 mx-auto mb-4 p-4 rounded-full bg-purple-50 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Informatique</h3>
+                <p class="text-gray-600 mb-4">Pack Office, Canva (Création de visuels), CapCut (Montage vidéo)</p>
+                <div class="flex flex-wrap justify-center gap-2 mt-4">
+                    <span class="px-3 py-1 text-xs bg-purple-100 text-purple-800 rounded-full">Pack Office</span>
+                    <span class="px-3 py-1 text-xs bg-purple-100 text-purple-800 rounded-full">Canva</span>
+                    <span class="px-3 py-1 text-xs bg-purple-100 text-purple-800 rounded-full">CapCut</span>
+                </div>
+            </div>
+            
+            <!-- Langues -->
+            <!-- Langues -->
+            <div class="skill-card rounded-xl p-6 text-center relative overflow-hidden bg-white">
+                <div class="skill-icon w-20 h-20 mx-auto mb-4 p-4 rounded-full bg-green-50 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Langues</h3>
+                <p class="text-gray-600 mb-4">Français, Berbère, Anglais, Espagnol</p>
+                <div class="flex flex-wrap justify-center gap-2 mt-4">
+                    <span class="px-3 py-1 text-xs bg-green-100 text-green-800 rounded-full">Français (C1)</span>
+                    <span class="px-3 py-1 text-xs bg-green-100 text-green-800 rounded-full">Berbère (C1)</span>
+                    <span class="px-3 py-1 text-xs bg-green-100 text-green-800 rounded-full">Anglais (B1)</span>
+                    <span class="px-3 py-1 text-xs bg-green-100 text-green-800 rounded-full">Espagnol (B1)</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+           
+<!-- Contact Section -->
+<section id="contact" class="py-20 relative overflow-hidden bg-gray-50">
+    <!-- Éléments décoratifs -->
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-[#e75e45]/5 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-[#4f93ce]/5 rounded-full blur-3xl"></div>
+    
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Colonne de texte -->
+            <div data-scroll-reveal="enter left move 30px over 0.6s after 0.2s">
+                <h2 class="text-4xl font-bold mb-6">Créons Ensemble <span class="gradient-text">Votre Prochain Succès</span></h2>
+                
+                <div class="bg-white rounded-xl shadow-md p-8 border-l-4 border-[#e75e45] mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Pourquoi moi ?</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Rejoindre votre entreprise, c'est bien plus qu'une alternance pour moi : c'est l'opportunité de <span class="font-semibold text-[#e75e45]">mettre en action mes idées, d'innover et de contribuer concrètement à vos projets</span>.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Polyvalente, curieuse et proactive, je ne me contente pas d'exécuter des tâches : je propose, j'expérimente et j'optimise pour maximiser les résultats.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Carte 1: Disponibilité -->
+                    <div class="bg-white rounded-xl shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-[#e75e45]/10 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold">Disponibilité</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Alternance : <span class="text-[#e75e45] font-medium">2025 (1 sem/1 sem)</span><br>
+                            Temps plein : <span class="text-[#e75e45] font-medium">Mi-mars 2026</span>
+                        </p>
+                    </div>
+                    
+                    <!-- Carte 2: Localisation -->
+                    <div class="bg-white rounded-xl shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-[#4f93ce]/10 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#4f93ce]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold">Localisation</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Hérault & Gard<br>
+                            <span class="text-[#4f93ce] font-medium">Mobilité régionale</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Colonne de coordonnées -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                <!-- Partie supérieure avec effet visuel -->
+                <div class="bg-gradient-to-r from-[#e75e45] to-[#e78045] p-8 text-white relative">
+                    <div class="absolute inset-0 bg-black opacity-10 pattern-dots"></div>
+                    <h3 class="text-2xl font-bold mb-4 relative z-10">Me contacter</h3>
+                    <p class="relative z-10">
+                        Une question ? Un projet ? Une opportunité d'alternance ?<br>
+                        <span class="text-white/80 italic">N'hésitez pas à me contacter !</span>
+                    </p>
+                    
+                    <!-- Élément mystérieux -->
+                    <div class="absolute -bottom-6 -right-6 w-20 h-20 bg-white/10 rounded-full blur-lg pulse-slow"></div>
+                </div>
+                
+                <!-- Coordonnées -->
+                <div class="p-8">
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-[#e75e45]/10 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-500">Email</h4>
+                                <a href="mailto:tamzirt.wiam10@gmail.com" class="text-lg font-medium text-gray-800 hover:text-[#e75e45] transition-colors">tamzirt.wiam10@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-[#e75e45]/10 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-500">Téléphone</h4>
+                                <a href="tel:0766813265" class="text-lg font-medium text-gray-800 hover:text-[#e75e45] transition-colors">07 66 81 32 65</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-[#e75e45]/10 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-500">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/wiam-tamzirt" target="_blank" class="text-lg font-medium text-gray-800 hover:text-[#e75e45] transition-colors">www.linkedin.com/in/wiam-tamzirt</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Appel à l'action -->
+                    <div class="mt-8 text-center">
+                        <a href="mailto:tamzirt.wiam10@gmail.com" class="inline-block px-8 py-3 rounded-full shadow-lg btn-primary">
+                            Écrivez-moi
+                        </a>
+                        <p class="text-sm text-gray-500 italic mt-4">
+                            « Le futur appartient à ceux qui croient en la beauté de leurs rêves. »
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Élément mystérieux avec code binaire en arrière-plan -->
+    <div class="absolute bottom-10 left-10 text-[0.5rem] text-gray-200/10 font-mono rotate-12 select-none">
+        01101100 01100101 00100000 01110000 01110010 01101111 01100011 01101000 01100001 01101001 01101110 00100000 01110000 01110010 01101111 01101010 01100101 01110100 00100000 01100011 00100111 01100101 01110011 01110100 00100000 01100001 01110110 01100101 01100011 00100000 01110110 01101111 01110101 01110011
+    </div>
+</section>
+
+<style>
+    .pattern-dots {
+        background-image: radial-gradient(currentColor 1px, transparent 1px);
+        background-size: calc(10 * 1px) calc(10 * 1px);
+    }
+    
+    .pulse-slow {
+        animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 0.6;
+        }
+        50% {
+            opacity: 0.3;
+        }
+    }
+</style>
+</body>
+</html>

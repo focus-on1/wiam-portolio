@@ -1,0 +1,848 @@
+
+
+.experience-section {
+    background-color: #0a0e17;
+    color: #fff;
+    min-height: 800px;
+    perspective: 1000px;
+    overflow-x: hidden;
+}
+
+/* Effet de parallaxe pour le fond */
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        #0a0a0a 0%,           /* Noir profond à la base */
+        #1a0f2a 20%,          /* Violet noir très sombre */
+        #2f1a3f 40%,          /* Violet sombre intense */
+        #4a2b5f 60%,          /* Violet profond */
+        #6a3b7f 80%,          /* Violet moyen */
+        #8a4fff 95%,          /* Violet clair avec une touche de luminosité */
+        #ff6b35 100%          /* Pointe de l'orange fluo au sommet */
+    );
+    background-size: 100% 200%;
+    animation: gradientFlow 20s ease-in-out infinite alternate;
+    opacity: 0.95;
+    z-index: 0;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
+}
+/* Titre avec effet 3D */
+.title-3d-container {
+    position: relative;
+    perspective: 1000px;
+    text-align: center;
+    height: 100px;
+}
+
+.title-3d {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: transparent;
+    background: linear-gradient(135deg, #ff7b00, #e75e45);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform-style: preserve-3d;
+    transform: rotateX(10deg);
+    animation: floatTitle 3s ease-in-out infinite;
+    text-shadow: 0 0 15px rgba(255, 123, 0, 0.5);
+}
+
+.title-shadow {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 10px;
+    background: rgba(255, 123, 0, 0.3);
+    filter: blur(15px);
+    border-radius: 50%;
+    animation: shadowPulse 3s ease-in-out infinite;
+}
+
+@keyframes floatTitle {
+    0%, 100% { transform: rotateX(10deg) translateY(0); }
+    50% { transform: rotateX(10deg) translateY(-10px); }
+}
+
+@keyframes shadowPulse {
+    0%, 100% { width: 80%; opacity: 0.3; }
+    50% { width: 70%; opacity: 0.2; }
+}
+
+/* Interface d'exploration du parcours */
+.journey-explorer {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(17, 24, 39, 0.7);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Contrôles de navigation */
+.explorer-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ctrl-btn {
+    background: rgba(255, 123, 0, 0.2);
+    color: #ff7b00;
+    border: 2px solid #ff7b00;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 123, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.ctrl-btn:hover {
+    background: rgba(255, 123, 0, 0.4);
+    box-shadow: 0 0 20px rgba(255, 123, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.ctrl-btn:active {
+    transform: scale(0.95);
+}
+
+.ctrl-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.explorer-progress {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.progress-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff7b00, #e75e45);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.station-indicators {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.station-indicators::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.station-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #333;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.station-indicator.visited {
+    background: #ff7b00;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 123, 0, 0.5);
+}
+
+.station-indicator.active {
+    background: #ff7b00;
+    border-color: #fff;
+    transform: scale(1.5);
+    box-shadow: 0 0 15px rgba(255, 123, 0, 0.7);
+}
+
+/* Zone d'affichage principale */
+.journey-viewer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 450px;
+    overflow: hidden;
+}
+
+/* Avatar/personnage */
+.avatar-container {
+    flex: 0 0 150px;
+    text-align: center;
+    z-index: 10;
+}
+
+.avatar {
+    position: relative;
+    width: 120px;
+    margin: 0 auto;
+}
+
+.avatar-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff7b00;
+    box-shadow: 0 0 20px rgba(255, 123, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.avatar-xp-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.avatar-xp-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4aff00, #00ff84);
+    border-radius: 3px;
+    transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.avatar-level {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Carrousel des stations */
+.metro-map {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.stations-carousel {
+    position: relative;
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+}
+
+/* Stations de métro */
+.metro-station {
+    position: relative;
+    min-width: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.metro-station.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.station-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    background: #e75e45;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 0 4px rgba(231, 94, 69, 0.3), 0 0 20px rgba(231, 94, 69, 0.5);
+}
+
+.pulse-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(231, 94, 69, 0.6);
+    animation: pulse 2s infinite;
+    z-index: 9;
+
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+.station-card {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.station-formation .station-card {
+    background: linear-gradient(135deg, rgba(0, 179, 255, 0.1), rgba(0, 119, 255, 0.05));
+    border-left: 3px solid #00b3ff;
+}
+
+.station-experience .station-card {
+    background: linear-gradient(135deg, rgba(255, 123, 0, 0.1), rgba(231, 94, 69, 0.05));
+    border-left: 3px solid #ff7b00;
+}
+
+.station-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.station-year {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #ff7b00;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.station-formation .station-year {
+    background: #00b3ff;
+}
+
+.station-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.station-card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.station-details {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-style: italic;
+    font-size: 0.9rem !important;
+}
+
+.station-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.station-formation .station-tag {
+    background: rgba(0, 179, 255, 0.2);
+}
+
+.station-experience .station-tag {
+    background: rgba(255, 123, 0, 0.2);
+}
+
+/* Gain d'XP */
+.xp-gain {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 255, 132, 0.2);
+    color: #4aff00;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.xp-gain.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Indications d'utilisation */
+.usage-hint {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.key {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin: 0 3px;
+}
+
+/* QR Code avec effet 3D */
+.qr-container {
+    position: relative;
+    perspective: 1000px;
+    width: 150px;
+    height: 150px;
+    margin: 30px auto 0;
+}
+
+.qr-3d-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.qr-container:hover .qr-3d-card {
+    transform: rotateY(180deg);
+}
+
+.qr-front, .qr-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.qr-front {
+    background: white;
+}
+
+.qr-back {
+    background: linear-gradient(135deg, #00b3ff, #ff7b00);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.qr-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.qr-image {
+    width: 100px;
+    height: 100px;
+}
+
+.qr-back h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.qr-back p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Animations pour avatar */
+@keyframes levelUp {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); box-shadow: 0 0 30px rgba(74, 255, 0, 0.8); }
+    100% { transform: scale(1); }
+}
+
+.avatar-level-up {
+    animation: levelUp 0.8s ease;
+}
+
+@media (max-width: 768px) {
+    /* Titre plus petit sur mobile */
+    .title-3d {
+        font-size: 2.5rem;
+    }
+    
+    /* Réorganiser le layout pour mobile */
+    .journey-viewer {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Repositionner et réduire l'avatar */
+    .avatar-container {
+        position: relative;
+        z-index: 20;
+        margin: 0 auto 10px;
+        transform: translateY(30px); /* Placer l'avatar pour qu'il chevauche la carte */
+    }
+    
+    .avatar {
+        width: 90px;
+        margin: 0 auto;
+    }
+    
+    .avatar-img {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .avatar-xp-bar {
+        width: 80%;
+        margin: 5px auto 0;
+    }
+    
+    .avatar-level {
+        font-size: 0.8rem;
+        margin-top: 2px;
+    }
+    
+    /* Ajuster la carte centrale */
+    .metro-map {
+        width: 100%;
+    }
+    
+    /* Restructurer la carte de station */
+    .metro-station {
+        width: 100%;
+        min-width: 100%;
+        padding: 0;
+        margin-top: -60px; /* Pour compenser l'avatar qui chevauche */
+    }
+    
+    .station-card {
+        width: 85%;
+        max-width: 85%;
+        padding: 40px 15px 15px; /* Padding top augmenté pour l'avatar */
+        margin: 0 auto;
+        border-radius: 18px;
+    }
+    
+    /* Ajuster les marqueurs pour qu'ils soient plus visibles */
+    .station-marker {
+        left: 12%; /* Repositionner sur le côté gauche de la carte */
+        top: 30%; /* Descendre légèrement */
+    }
+    
+    /* Assurer que les années sont visibles et bien positionnées */
+    .station-year {
+        right: 15px;
+        font-size: 0.75rem;
+        z-index: 15;
+    }
+    
+    /* Réduire la taille du texte pour s'adapter */
+    .station-card h3 {
+        font-size: 1.1rem;
+        margin-top: 0;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .station-card p {
+        font-size: 0.9rem;
+    }
+    
+    .station-details {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Optimiser les tags pour mobile */
+    .station-tag {
+        display: inline-block;
+        margin: 3px;
+        font-size: 0.7rem;
+        padding: 2px 6px;
+    }
+    
+    /* Ajuster le bouton de la dernière station */
+    .join-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        margin-top: 10px;
+    }
+    
+    /* Repositionner le gain XP */
+    .xp-gain {
+        bottom: 8px;
+        right: 8px;
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+    
+    /* Ajustements spéciaux pour la station future */
+    .question-mark {
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+    }
+    
+    .station-future .station-card {
+        padding-top: 45px;
+    }
+    
+    /* Améliorer les contrôles */
+    .explorer-controls {
+        margin: 0 0 15px;
+    }
+    
+    .ctrl-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .station-indicators {
+        margin-top: 5px;
+    }
+    
+    .station-indicator {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* Rendre le conteneur principal plus compact */
+    .journey-explorer {
+        width: 95%;
+        padding: 15px 10px 10px;
+        margin: 0 auto;
+    }
+    
+    /* Réduire la taille du QR code */
+    .qr-container {
+        width: 120px;
+        height: 120px;
+        margin: 20px auto 0;
+    }
+    
+    .qr-image {
+        width: 85px;
+        height: 85px;
+    }
+   
+
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+    .title-3d {
+        font-size: 2rem;
+    }
+    
+    .avatar-container {
+        transform: translateY(25px);
+    }
+    
+    .avatar {
+        width: 80px;
+    }
+    
+    .avatar-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .station-card {
+        width: 90%;
+        max-width: 90%;
+        padding: 35px 12px 12px;
+    }
+    
+    .station-card h3 {
+        font-size: 1rem;
+    }
+    
+    .station-card p {
+        font-size: 0.85rem;
+        margin-bottom: 3px;
+    }
+    
+    .join-btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .question-mark {
+        font-size: 2rem;
+    }
+    
+    .journey-explorer {
+        width: 98%;
+        padding: 10px 5px;
+    }
+}
+    /* Styles spécifiques pour la station Future */
+.station-future .station-card {
+        background: linear-gradient(135deg, rgba(111, 66, 193, 0.15), rgba(80, 0, 255, 0.05));
+        border-left: 3px solid #8a2be2;
+        border-top: 1px solid rgba(138, 43, 226, 0.3);
+        border-right: 1px solid rgba(138, 43, 226, 0.3);
+        border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+        box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
+        position: relative;
+        overflow: hidden;
+        
+}
+    
+.station-future .station-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, transparent 50%, rgba(138, 43, 226, 0.1));
+        z-index: -1;
+}
+    
+.station-future .station-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(138, 43, 226, 0.3);
+}
+    
+.future-marker {
+        background: #8a2be2;
+        box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.3), 0 0 20px rgba(138, 43, 226, 0.5);
+}
+    
+.future-pulse {
+        background: rgba(138, 43, 226, 0.6);
+        animation: futurePulse 2s infinite;
+}
+    
+@keyframes futurePulse {
+        0% { transform: scale(1); opacity: 1; }
+        100% { transform: scale(3); opacity: 0; }
+}
+    
+.future-year {
+        background: linear-gradient(135deg, #8a2be2, #5f00cc);
+        animation: glow 1.5s ease-in-out infinite alternate;
+        
+}
+    
+@keyframes glow {
+        from { box-shadow: 0 0 5px rgba(138, 43, 226, 0.5); }
+        to { box-shadow: 0 0 20px rgba(138, 43, 226, 0.8); }
+}
+    
+    .question-mark {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #8a2be2;
+        text-align: center;
+        margin-bottom: 10px;
+        text-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    .future-tag {
+        background: rgba(138, 43, 226, 0.2);
+        border: 1px solid rgba(138, 43, 226, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .future-tag:hover {
+        background: rgba(138, 43, 226, 0.4);
+        transform: translateY(-2px);
+    }
+    
+    .join-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 8px 16px;
+        background: linear-gradient(135deg, #8a2be2, #5f00cc);
+        color: white;
+        border-radius: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+    }
+    
+    .join-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 20px rgba(138, 43, 226, 0.5);
+    }
+    
+    .future-xp {
+        background: rgba(138, 43, 226, 0.3);
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(138, 43, 226, 0.5);
+        font-weight: bold;
+    }
+    
+    /* Animation spéciale pour XP infini */
+    .future-xp.show {
+        animation: infinityPulse 1.5s ease-in-out infinite alternate;
+    }
+    
+    @keyframes infinityPulse {
+        0% { transform: scale(1); opacity: 0.8; }
+        100% { transform: scale(1.1); opacity: 1; }
+    }

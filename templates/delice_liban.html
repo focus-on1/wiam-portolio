@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>**Les Délices du Liban** - Projet Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Dégradé de fond subtil inspiré des couleurs du Liban */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(206, 17, 38, 0.05) 0%, rgba(51, 102, 51, 0.05) 100%);
+            animation: gradientShift 15s ease infinite;
+            background-size: 400% 400%;
+            z-index: -1;
+        }
+
+        @keyframes gradientShift {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        /* Effets de survol et animations */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        @keyframes textReveal {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .text-reveal {
+            animation: textReveal 0.8s ease-out forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 relative overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-[#CE1126] transform transition hover:scale-105">Wiam Tamzirt</a>
+        </div>
+    </nav>
+
+    <!-- Contenu principal du projet -->
+    <div class="container mx-auto px-4 py-12 md:py-16 space-y-12">
+        <!-- En-tête du projet -->
+        <!-- En-tête du projet -->
+        <div class="text-center relative py-16 md:py-20 overflow-hidden" data-aos="fade-up">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#CE1126]/10 to-[#336633]/10 opacity-50 -z-10"></div>
+            
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-[#CE1126] mb-6 tracking-tight relative inline-block group">
+                    <span class="relative">
+                        PROJET 
+                        <span class="absolute -right-2 -top-2 w-3 h-3 bg-[#CE1126] rounded-full transform group-hover:scale-150 transition-transform duration-300 opacity-70"></span>
+                    </span>
+                    <span class="text-gray-800">Les Délices du Liban</span>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#CE1126] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </h1>
+                
+                <h2 class="max-w-3xl mx-auto text-xl md:text-2xl text-gray-700 leading-relaxed relative">
+                    <span class="absolute -left-4 top-0 text-[#CE1126] opacity-50 text-4xl">"</span>
+                    Un projet innovant en stratégie de communication pour un restaurant de cuisine libanaise
+                    <span class="absolute -right-4 bottom-0 text-[#CE1126] opacity-50 text-4xl">"</span>
+                </h2>
+            </div>
+        
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#CE1126]/10 rounded-full blur-2xl"></div>
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#336633]/10 rounded-full blur-2xl"></div>
+        </div>
+
+        <!-- Section présentation -->
+        <div class="grid md:grid-cols-2 gap-8 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-8 hover-lift" data-aos="fade-up">
+            <!-- Logo et contexte -->
+            <div class="flex flex-col justify-center">
+                <img src="{{ url_for('static', filename='images/delice_libane/logo.png') }}" alt="Logo Les Délices du Liban" class="max-w-xs mx-auto mb-6 transform hover:scale-110 transition-transform duration-300">
+                <div class="bg-white rounded-xl shadow-md p-6 border border-red-50">
+                    <h3 class="text-xl font-semibold text-[#CE1126] mb-4">Contexte du Projet</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Le projet visait à élaborer une <span class="font-semibold text-[#CE1126]">stratégie de communication commerciale</span> pour Les Délices du Liban, un restaurant spécialisé dans la cuisine libanaise situé à Montpellier.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        L'objectif principal était de <span class="font-semibold text-[#CE1126]">renforcer la visibilité</span> de l'enseigne en développant des supports de communication attractifs et en analysant son positionnement face à la concurrence.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Problématique et objectifs -->
+            <div class="bg-white rounded-xl shadow-md p-6 border border-green-50">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-[#CE1126] mb-4">Problématique Principale</h3>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        Comment optimiser la mise en valeur de l'offre commerciale du restaurant "Les Délices du Liban" et accroître sa notoriété ?
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-[#CE1126] mb-4">Objectifs Principaux</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center bg-red-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-red-100/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#CE1126] mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Analyser la concurrence et identifier les opportunités</span>
+                        </li>
+                        <li class="flex items-center bg-red-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-red-100/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#CE1126] mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0018 0z" />
+                            </svg>
+                            <span>Définir une cible marketing et commerciale</span>
+                        </li>
+                        <li class="flex items-center bg-red-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-red-100/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#CE1126] mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0018 0z" />
+                            </svg>
+                            <span>Créer une identité visuelle et des supports de communication</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galerie du projet -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-8" data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-[#CE1126] mb-6 text-center">Supports de Communication</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <img src="{{ url_for('static', filename='images/delice_libane/fiche.png') }}" alt="Plaquette Commerciale" class="rounded-lg shadow-md hover:scale-105 transition-transform object-cover hover-lift">
+                <div class="flex flex-col gap-6">
+                    <img src="{{ url_for('static', filename='images/delice_libane/fiche_detaille.png') }}" alt="Plaquette Commerciale Verso" class="rounded-lg shadow-md hover:scale-105 transition-transform object-cover hover-lift">
+                    
+                </div>
+                <img src="{{ url_for('static', filename='images/delice_libane/fiche_pub.png') }}" alt="Affiche Publicitaire" class="rounded-lg shadow-md hover:scale-105 transition-transform object-cover hover-lift">
+            </div>
+        </div>
+
+        <!-- Tâches réalisées -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-8" data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-[#CE1126] mb-6 text-center">Tâches Réalisées</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold text-[#CE1126] mb-4">Stratégie Marketing</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center bg-red-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-red-100/50">
+                            <svg class="w-5 h-5 text-[#CE1126] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0018 0z"></path>
+                            </svg>
+                            <span>Analyse concurrentielle</span>
+                        </li>
+                        <li class="flex items-center bg-red-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-red-100/50">
+                            <svg class="w-5 h-5 text-[#CE1126] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0018 0z"></path>
+                            </svg>
+                            <span>Segmentation marketing</span>
+                        </li>
+                        <li class="flex items-center bg-red-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-red-100/50">
+                            <svg class="w-5 h-5 text-[#CE1126] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0018 0z"></path>
+                            </svg>
+                            <span>Stratégie de communication</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-[#CE1126] mb-4">Réalisations</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center bg-red-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-red-100/50">
+                            <svg class="w-5 h-5 text-[#CE1126] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0018 0z"></path>
+                            </svg>
+                            <span>Plaquette commerciale</span>
+                        </li>
+                        <li class="flex items-center bg-red-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-red-100/50">
+                            <svg class="w-5 h-5 text-[#CE1126] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0018 0z"></path>
+                            </svg>
+                            <span>Affiche publicitaire</span>
+                        </li>
+                        <li class="flex items-center bg-red-50/50 p-2 rounded-lg transform transition hover:scale-105 hover:bg-red-100/50">
+                           <svg class="w-5 h-5 text-[#CE1126] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0018 0z"></path>
+                            </svg>
+                            <span>Identité visuelle</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white/80 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <p class="text-gray-600">© 2024 Wiam Tamzirt. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialiser AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Animation de text reveal
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealElements = document.querySelectorAll('.text-reveal');
+            revealElements.forEach((el, index) => {
+                el.style.animationDelay = `${0.2 * (index + 1)}s`;
+            });
+        });
+    </script>
+</body>
+</html>

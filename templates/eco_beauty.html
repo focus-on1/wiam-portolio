@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Beauty - Projet Marketing Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Fond noir avec un léger dégradé */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.98) 100%);
+            z-index: -1;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .device-mockup {
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .device-screen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 90%;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-black relative overflow-x-hidden text-white">
+    <!-- Navigation -->
+    <nav class="bg-black/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-white transform transition hover:scale-105">Wiam Tamzirt</a>
+        </div>
+    </nav>
+
+    <!-- Contenu principal du projet -->
+    <div class="container mx-auto px-4 py-12 md:py-16 space-y-12">
+        <!-- En-tête du projet -->
+        <div class="text-center relative py-16 md:py-20 overflow-hidden" data-aos="fade-up">
+            <div class="absolute inset-0 bg-gradient-to-br from-black/10 to-black/20 opacity-50 -z-10"></div>
+            
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight relative inline-block group">
+                    <span class="relative">
+                        PROJET 
+                        <span class="absolute -right-2 -top-2 w-3 h-3 bg-white rounded-full transform group-hover:scale-150 transition-transform duration-300 opacity-70"></span>
+                    </span>
+                    <span class="text-gray-300">Eco-Beauty</span>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-white origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </h1>
+                
+                <h2 class="max-w-3xl mx-auto text-xl md:text-2xl text-gray-300 leading-relaxed relative">
+                    <span class="absolute -left-4 top-0 text-white opacity-50 text-4xl">"</span>
+                    Création d'une marque de cosmétiques éco-responsables avec une stratégie digitale innovante
+                    <span class="absolute -right-4 bottom-0 text-white opacity-50 text-4xl">"</span>
+                </h2>
+            </div>
+        
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-white/5 rounded-full blur-2xl"></div>
+        </div>
+
+        <!-- Présentation du Projet -->
+        <div class="grid md:grid-cols-2 gap-8 bg-black/70 backdrop-blur-sm rounded-2xl shadow-lg border border-white/10 p-8" data-aos="fade-up">
+            <!-- Contexte -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Contexte du Projet</h3>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Eco-Beauty est une <span class="font-semibold text-white">marque fictive de cosmétiques</span> créée par une équipe de cinq étudiants passionnés par l'univers de la beauté et du bien-être.
+                </p>
+                <p class="text-gray-300 leading-relaxed">
+                    L'objectif était de <span class="font-semibold text-white">concevoir une marque complète</span>, développer un site e-commerce et élaborer une stratégie digitale pour assurer sa visibilité en ligne.
+                </p>
+            </div>
+            
+            <!-- Objectifs -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Objectifs Principaux</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-center bg-white/10 p-2 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Créer une identité de marque forte</span>
+                    </li>
+                    <li class="flex items-center bg-white/10 p-2 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Développer un site e-commerce optimisé</span>
+                    </li>
+                    <li class="flex items-center bg-white/10 p-2 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Mettre en place une stratégie digitale</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-black/70 backdrop-blur-sm rounded-2xl shadow-lg border border-white/10 p-8 mt-12" data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-white mb-6 text-center">Notre Stratégie Marketing Digital</h3>
+            
+            <!-- Grille de stratégies marketing -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Stratégie SEO -->
+                <div class="bg-white/10 p-6 rounded-xl hover:bg-white/20 transition-all">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <h4 class="text-xl font-semibold">Stratégie SEO</h4>
+                    </div>
+                    <p class="text-gray-300">Optimisation pour les moteurs de recherche avec des mots-clés ciblés sur la cosmétique naturelle, les produits éco-responsables et le bien-être.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="text-white mr-2">•</span>
+                            Recherche de mots-clés
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white mr-2">•</span>
+                            Optimisation on-page
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white mr-2">•</span>
+                            Création de contenu SEO
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Réseaux Sociaux -->
+                <div class="bg-white/10 p-6 rounded-xl hover:bg-white/20 transition-all">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                        </svg>
+                        <h4 class="text-xl font-semibold">Réseaux Sociaux</h4>
+                    </div>
+                    <p class="text-gray-300">Présence active sur Instagram, Facebook et TikTok avec du contenu engageant autour des produits et des valeurs de la marque.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="text-white mr-2">•</span>
+                            Calendrier éditorial
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white mr-2">•</span>
+                            Contenu visuel de qualité
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white mr-2">•</span>
+                            Campagnes d'engagement
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Marketing d'Influence -->
+                <div class="bg-white/10 p-6 rounded-xl hover:bg-white/20 transition-all">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <h4 class="text-xl font-semibold">Marketing d'Influence</h4>
+                    </div>
+                    <p class="text-gray-300">Collaboration avec des micro-influenceurs spécialisés dans la beauté naturelle et le mode de vie éco-responsable.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="text-white mr-2">•</span>
+                            Sélection d'influenceurs
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white mr-2">•</span>
+                            Campagnes de partenariat
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-white mr-2">•</span>
+                            Codes promo personnalisés
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Visualisation du Projet avec nouvelle disposition -->
+        <div class="bg-black/70 backdrop-blur-sm rounded-2xl shadow-lg border border-white/10 p-8" data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-white mb-6 text-center">Présentation du Site Web</h3>
+            
+            <!-- Vue PC en pleine largeur -->
+            <div class="relative w-full aspect-video mb-8">
+                <div class="absolute inset-0 bg-white rounded-2xl shadow-2xl p-4 flex items-center justify-center">
+                    <div class="w-full h-full overflow-hidden rounded-xl">
+                        <video 
+                            src="{{ url_for('static', filename='images/eco_beauty/ecobeauty.mp4') }}" 
+                            class="w-full h-full object-cover"
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline
+                        ></video>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-black/70 backdrop-blur-sm rounded-2xl shadow-lg border border-white/10 p-8 mt-12" data-aos="fade-up">
+                <h3 class="text-2xl font-semibold text-white mb-6 text-center">Résultats & Performances</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Graphique de performance (simulé) -->
+                    <div class="bg-white/10 p-6 rounded-xl">
+                        <h4 class="text-xl font-semibold mb-4">Indicateurs Clés de Performance</h4>
+                        
+                        <!-- KPI 1 -->
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Trafic organique</span>
+                                <span class="text-white font-semibold">+45%</span>
+                            </div>
+                            <div class="w-full bg-white/20 rounded-full h-2">
+                                <div class="bg-white h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- KPI 2 -->
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Taux de conversion</span>
+                                <span class="text-white font-semibold">3.2%</span>
+                            </div>
+                            <div class="w-full bg-white/20 rounded-full h-2">
+                                <div class="bg-white h-2 rounded-full" style="width: 32%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- KPI 3 -->
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Engagement sur les réseaux sociaux</span>
+                                <span class="text-white font-semibold">+78%</span>
+                            </div>
+                            <div class="w-full bg-white/20 rounded-full h-2">
+                                <div class="bg-white h-2 rounded-full" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- KPI 4 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">ROI campagnes publicitaires</span>
+                                <span class="text-white font-semibold">285%</span>
+                            </div>
+                            <div class="w-full bg-white/20 rounded-full h-2">
+                                <div class="bg-white h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Témoignages ou résultats qualitatifs -->
+                    <div class="bg-white/10 p-6 rounded-xl">
+                        <h4 class="text-xl font-semibold mb-4">Ce que nous avons appris</h4>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 bg-white/5 rounded-lg">
+                                <p class="text-gray-300 italic">
+                                    "La stratégie d'influence s'est révélée particulièrement efficace pour notre marque, avec un taux d'engagement supérieur à la moyenne du secteur."
+                                </p>
+                            </div>
+                            
+                            <div class="p-4 bg-white/5 rounded-lg">
+                                <p class="text-gray-300 italic">
+                                    "L'optimisation mobile a été cruciale, avec plus de 70% de notre trafic provenant des smartphones."
+                                </p>
+                            </div>
+                            
+                            <div class="p-4 bg-white/5 rounded-lg">
+                                <p class="text-gray-300 italic">
+                                    "La création de contenu à valeur ajoutée autour des ingrédients naturels et de l'impact environnemental a généré un fort taux de partage."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bloc avec les 3 vues téléphone côte à côte -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="device-mockup mx-auto" style="max-width: 300px; width: 100%;">
+                    <div class=" rounded-2xl shadow-xl p-3 aspect-[9/16]">
+                        <div class="device-screen bg-white h-full">
+                            <video 
+                                src="{{ url_for('static', filename='images/eco_beauty/telecobeauty.mov') }}" 
+                                class="w-full h-full object-cover"
+                                autoplay 
+                                loop 
+                                muted 
+                                playsinline
+                            ></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="device-mockup mx-auto" style="max-width: 300px; width: 100%;">
+                    <div class=" rounded-2xl shadow-xl p-3 aspect-[9/16]">
+                        <div class="device-screen bg-white h-full">
+                            <video 
+                                src="{{ url_for('static', filename='images/eco_beauty/FBecobeauty.mov') }}" 
+                                class="w-full h-full object-cover"
+                                autoplay 
+                                loop 
+                                muted 
+                                playsinline
+                            ></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="device-mockup mx-auto" style="max-width: 300px; width: 100%;">
+                    <div class=" rounded-2xl shadow-xl p-3 aspect-[9/16]">
+                        <div class="device-screen bg-white h-full">
+                            <video 
+                                src="{{ url_for('static', filename='images/eco_beauty/tiktokecobeauty.mov') }}" 
+                                class="w-full h-full object-cover"
+                                autoplay 
+                                loop 
+                                muted 
+                                playsinline
+                            ></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-black/80 backdrop-blur-md shadow-md border-t border-white/10">
+            <div class="container mx-auto px-4 py-6 text-center">
+                <p class="text-gray-400">© 2024 Wiam Tamzirt. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialiser AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>

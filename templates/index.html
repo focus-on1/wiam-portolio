@@ -53,189 +53,93 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="min-h-screen flex items-center pt-20 pb-32 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-    <!-- Effet de glassmorphisme et vagues animées -->
+<section class="min-h-screen flex items-center py-20 relative overflow-hidden bg-[#f5f2eb]">
+    <!-- Quelques bulles d'animation minimalistes avec les couleurs originales -->
     <div class="absolute inset-0 overflow-hidden">
-        <!-- Vagues animées en arrière-plan -->
-        <div class="absolute inset-0 z-0">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(231, 94, 69, 0.1)" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(231, 94, 69, 0.15)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(231, 94, 69, 0.2)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(231, 94, 69, 0.05)" />
-                </g>
-            </svg>
-        </div>
+        <!-- Quelques cercles décoratifs discrets avec les couleurs originales -->
+        <div class="absolute top-20 left-20 w-32 h-32 bg-[#e75e45] opacity-10 rounded-full blur-xl"></div>
+        <div class="absolute bottom-20 right-20 w-40 h-40 bg-[#4f93ce] opacity-10 rounded-full blur-xl"></div>
+        <div class="absolute top-1/3 right-1/4 w-24 h-24 bg-[#e75e45] opacity-10 rounded-full blur-xl"></div>
         
-        <!-- Cercles décoratifs animés -->
-        <div class="absolute top-20 left-20 w-64 h-64 bg-[#e75e45] opacity-10 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-[#4f93ce] opacity-10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-        <div class="absolute top-1/3 right-1/4 w-40 h-40 bg-[#e75e45] opacity-10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
-        
-        <!-- Particules flottantes -->
-        <div id="particles-js" class="absolute inset-0 z-0"></div>
+        <!-- Quelques petites bulles flottantes -->
+        <div class="absolute top-40 left-1/4 w-5 h-5 bg-[#e75e45] opacity-20 rounded-full animate-float-slow"></div>
+        <div class="absolute bottom-40 right-1/3 w-6 h-6 bg-[#4f93ce] opacity-20 rounded-full animate-float-slower"></div>
     </div>
     
     <div class="container mx-auto px-6 relative z-10">
         <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
-            <div class="lg:w-1/2 text-center lg:text-left" data-scroll-reveal="enter left move 30px over 0.6s after 0.2s">
-                <!-- Badge stylisé -->
-                <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md rounded-full mb-6 text-white/90 border border-white/20">
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <!-- Badge stylisé mais simplifié -->
+                <div class="inline-flex items-center px-4 py-2 bg-[#e75e45]/10 rounded-full mb-6 text-[#e75e45]">
                     <span class="flex h-3 w-3 relative mr-3">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#e75e45] opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-3 w-3 bg-[#e75e45]"></span>
                     </span>
                     <p class="font-medium tracking-wider uppercase text-sm">Portfolio Professionnel</p>
                 </div>
                 
-                <!-- Titre principal avec effet -->
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
-                    <span class="gradient-text relative inline-block">
-                        WIAM
-                        <div class="absolute -bottom-1 left-0 w-full h-1 bg-[#e75e45]/40 rounded-full transform origin-left animate-pulse"></div>
-                    </span>
+                <!-- Titre avec les couleurs originales -->
+                <h1 class="text-5xl md:text-6xl font-bold mb-8 tracking-tight text-gray-800">
+                    <span class="gradient-text">WIAM</span>
                     <br /> 
-                    <span class="gradient-text ml-8 md:ml-12 relative inline-block">
-                        TAMZIRT
-                        <div class="absolute -bottom-1 left-0 w-full h-1 bg-[#e75e45]/40 rounded-full transform origin-left animate-pulse"></div>
-                    </span>
+                    <span class="gradient-text ml-8 md:ml-12">TAMZIRT</span>
                 </h1>
                 
-                <!-- Texte dynamique -->
-                <div class="text-xl text-gray-300 mb-8 h-16 backdrop-blur-sm bg-white/5 px-4 py-2 rounded-lg inline-block">
-                    <span id="typed-output"></span>
-                    <span class="typing-cursor">|</span>
+                <!-- Texte descriptif simple -->
+                <div class="text-xl text-gray-600 mb-8">
+                    <p>Marketing Digital & Développement Web</p>
                 </div>
                 
-                <!-- Boutons d'action -->
+                <!-- Boutons d'action avec le style original -->
                 <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
                     <a href="#propos" class="px-8 py-3 rounded-full shadow-lg bg-gradient-to-r from-[#e75e45] to-[#e78045] text-white font-medium hover:shadow-[#e75e45]/30 hover:shadow-xl transform transition duration-300 hover:-translate-y-1 inline-block">
                         En savoir plus
                     </a>
-                    <a href="#contact" class="px-8 py-3 rounded-full shadow-lg bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transform transition duration-300 hover:-translate-y-1 inline-block">
+                    <a href="#contact" class="px-8 py-3 rounded-full shadow-lg bg-white/10 backdrop-blur-md border border-gray-200 text-gray-700 hover:bg-gray-50 transform transition duration-300 hover:-translate-y-1 inline-block">
                         Me contacter
                     </a>
                 </div>
                 
-                <!-- Social links -->
+                <!-- Social links avec les couleurs originales -->
                 <div class="mt-10 flex justify-center lg:justify-start space-x-4">
-                    <a href="https://www.linkedin.com/in/wiam-tamzirt" class="group w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-[#e75e45] hover:border-[#e75e45] hover:text-white flex items-center justify-center transition-all duration-300 transform hover:scale-110">
-                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <a href="https://www.linkedin.com/in/wiam-tamzirt" class="group w-10 h-10 rounded-full bg-white border border-gray-200 hover:bg-[#e75e45] hover:border-[#e75e45] hover:text-white flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                        <svg class="w-5 h-5 text-gray-600 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                         </svg>
-                        <span class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs text-white -bottom-6">LinkedIn</span>
                     </a>
                 </div>
             </div>
-            <div class="lg:w-1/2 flex justify-center" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+            <div class="lg:w-1/2 flex justify-center">
                 <div class="relative">
-                    <div class="profile-card relative">
-                        <!-- Decorative background shapes avec animation avancée -->
-                        <div class="absolute -left-10 -top-10 w-64 h-64 bg-[#e75e45] opacity-10 rounded-full blur-3xl animate-float"></div>
-                        <div class="absolute -right-5 bottom-10 w-40 h-40 bg-[#4f93ce] opacity-10 rounded-full blur-3xl animate-float-delay"></div>
+                    <!-- Image container avec bordure fine utilisant les couleurs originales -->
+                    <div class="relative rounded-xl overflow-hidden border-2 border-[#e75e45]/20 shadow-md bg-white">
+                        <img src="{{ url_for('static', filename='images/wiam.png') }}" alt="Wiam Tamzirt" class="w-80 h-96 object-cover">
                         
-                        <!-- Effet de glassmorphisme autour de l'image -->
-                        <div class="absolute -inset-4 rounded-2xl bg-gradient-to-r from-[#e75e45]/20 to-[#4f93ce]/20 backdrop-blur-xl opacity-70 transform -rotate-6"></div>
-                        
-                        <!-- Main image container with animation -->
-                        <div class="relative z-10 rounded-xl overflow-hidden border-4 border-white/20 shadow-2xl animated-border bg-gradient-to-br from-gray-900/70 to-gray-800/70 backdrop-blur-md">
-                            <img src="{{ url_for('static', filename='images/wiam.png') }}" alt="Wiam Tamzirt" class="w-80 h-96 object-cover">
-                            
-                            <!-- Overlay with additional info -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end transform translate-y-full hover:translate-y-0 transition-transform duration-500">
-                                <h3 class="text-white text-lg font-bold">Wiam Tamzirt</h3>
-                                <p class="text-white/90 text-sm">Marketing Digital & Développement Web</p>
-                                <div class="mt-4 flex space-x-2">
-                                    <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs rounded-full border border-white/10">Étudiante</span>
-                                    <span class="px-3 py-1 bg-[#e75e45]/30 backdrop-blur-sm text-white text-xs rounded-full border border-[#e75e45]/20">Créative</span>
-                                    <span class="px-3 py-1 bg-[#4f93ce]/30 backdrop-blur-sm text-white text-xs rounded-full border border-[#4f93ce]/20">Passionnée</span>
-                                </div>
+                        <!-- Overlay simplifié -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#e75e45]/60 via-transparent to-transparent p-6 flex flex-col justify-end opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white text-lg font-medium">Wiam Tamzirt</h3>
+                            <p class="text-white/90 text-sm">Marketing Digital & Développement Web</p>
+                            <div class="mt-4 flex space-x-2">
+                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs rounded-full">Créative</span>
+                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs rounded-full">Passionnée</span>
                             </div>
                         </div>
                         
-                        <!-- Decorative floating badges -->
-                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-full shadow-lg z-20 pulse">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#e75e45]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                        </div>
-                        
-                        <!-- Bulles flottantes autour de l'image -->
-                        <div class="absolute top-0 -left-6 w-8 h-8 bg-[#e75e45]/20 rounded-full backdrop-blur-md animate-float-slow border border-[#e75e45]/30"></div>
-                        <div class="absolute bottom-10 -right-8 w-12 h-12 bg-[#4f93ce]/20 rounded-full backdrop-blur-md animate-float-slower border border-[#4f93ce]/30"></div>
-                        <div class="absolute top-1/3 -right-4 w-6 h-6 bg-white/10 rounded-full backdrop-blur-md animate-ping"></div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
-    
-    <!-- Scroll down indicator -->
     <a href="#propos" class="scroll-down text-white/80 hover:text-white transition-colors group">
         <span class="group-hover:text-[#e75e45] transition-colors">Découvrir</span>
         <div class="mouse border-white/40 group-hover:border-[#e75e45]">
             <div class="wheel bg-white/80 group-hover:bg-[#e75e45]"></div>
         </div>
     </a>
-    
-    <!-- Wave separator -->
-    <div class="hero-shape">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-        </svg>
-    </div>
 </section>
 
 <style>
-    /* Animation des vagues */
-    .waves {
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        overflow: hidden;
-    }
-    
-    .parallax > use {
-        animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
-    }
-    
-    .parallax > use:nth-child(1) {
-        animation-delay: -2s;
-        animation-duration: 7s;
-    }
-    
-    .parallax > use:nth-child(2) {
-        animation-delay: -3s;
-        animation-duration: 10s;
-    }
-    
-    .parallax > use:nth-child(3) {
-        animation-delay: -4s;
-        animation-duration: 13s;
-    }
-    
-    .parallax > use:nth-child(4) {
-        animation-delay: -5s;
-        animation-duration: 20s;
-    }
-    
-    @keyframes move-forever {
-        0% {
-            transform: translate3d(-90px,0,0);
-        }
-        100% { 
-            transform: translate3d(85px,0,0);
-        }
-    }
-    
-    /* Animations flottantes */
+    /* Animations flottantes douces */
     @keyframes float {
         0% {
             transform: translateY(0px);
@@ -248,14 +152,6 @@
         }
     }
     
-    .animate-float {
-        animation: float 6s ease-in-out infinite;
-    }
-    
-    .animate-float-delay {
-        animation: float 7s ease-in-out 2s infinite;
-    }
-    
     .animate-float-slow {
         animation: float 10s ease-in-out infinite;
     }
@@ -264,117 +160,15 @@
         animation: float 12s ease-in-out 1s infinite;
     }
     
-    /* Curseur d'écriture */
-    .typing-cursor {
-        display: inline-block;
-        width: 3px;
-        background-color: currentColor;
-        animation: typing-cursor 0.7s infinite;
-    }
-    
-    @keyframes typing-cursor {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-    }
-    
-    /* Style du gradient-text */
+    /* Style du gradient-text simplifié */
     .gradient-text {
         background: linear-gradient(45deg, #e75e45, #ff9d7a);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
         display: inline-block;
-        position: relative;
-        text-shadow: 0 10px 20px rgba(231, 94, 69, 0.2);
-    }
-    
-    /* Bordure animée */
-    .animated-border::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 10px;
-        padding: 3px;
-        background: linear-gradient(45deg, #e75e45, #4f93ce, #e75e45);
-        background-size: 200% 200%;
-        animation: rotate-gradient 4s linear infinite;
-        -webkit-mask: 
-            linear-gradient(#fff 0 0) content-box, 
-            linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-    }
-    
-    @keyframes rotate-gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
     }
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Configuration des particules
-    if (typeof particlesJS !== 'undefined') {
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 30, density: { enable: true, value_area: 800 } },
-                color: { value: ["#e75e45", "#4f93ce", "#ffffff"] },
-                shape: { type: "circle" },
-                opacity: { value: 0.3, random: true, anim: { enable: true, speed: 0.5, opacity_min: 0.1, sync: false } },
-                size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.1, sync: false } },
-                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.1, width: 1 },
-                move: {
-                    enable: true,
-                    speed: 1,
-                    direction: "none",
-                    random: true,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { enable: true, mode: "grab" },
-                    onclick: { enable: true, mode: "push" },
-                    resize: true
-                },
-                modes: {
-                    grab: { distance: 140, line_linked: { opacity: 0.3 } },
-                    push: { particles_nb: 3 }
-                }
-            },
-            retina_detect: true
-        });
-    }
-    
-    // Configuration de l'animation de texte
-    if (typeof Typed !== 'undefined') {
-        var typed = new Typed('#typed-output', {
-            strings: [
-                "Marketing Digital",
-                "Développement Web",
-                "Communication",
-                "Créativité & Innovation"
-            ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 1500,
-            startDelay: 500,
-            loop: true,
-            showCursor: false
-        });
-    }
-});
-</script>
 
 <!-- About Me Preview Section -->
 <section id="propos" class="py-12 md:py-24 bg-gray-50 relative overflow-hidden">
